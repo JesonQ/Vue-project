@@ -3,6 +3,8 @@ import App from './App.vue'
 import "@/mock"
 import router from "@/router"
 import "@/common/stylus/style.styl"
+import "@/common/stylus/transition.styl"
+
 
 Vue.config.productionTip = false;
 

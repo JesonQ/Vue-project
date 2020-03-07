@@ -15,8 +15,7 @@
                     <span>满减即送精美礼品一份!</span>
                 </div>
             </div>
-
-            <div class="btn">
+            <div class="btn" @click="showMask=true">
                 <span>5个</span>
                 <i class="icon-keyboard_arrow_right"></i>
             </div>
@@ -33,30 +32,32 @@
             </div>
             <i class="icon-keyboard_arrow_right right"></i>
         </div>
-        <div class="mask">
-            <div class="mask-wrap">
-                <div class="mask-main">
-                    <h3>粥品天下(大水店)</h3>
-                    <div class="star"></div>
-                    <ele-line>
-                        <span>优惠信息</span>
-                    </ele-line>
-                    <ele-list></ele-list>
-                    <ele-line>
-                        <span>商家公告</span>
-                    </ele-line>
-                    <span class="sj-show">
-                        用2B形容你，人家铅笔不乐意。
-                        都说谈恋爱会影响学习，难道学习，就不影响谈恋爱吗？
-                        别人都用名牌包包，而你，只能用用表情包。
-                        夜太美，尽管再危险，总有人黑着眼眶修着仙。
-                    </span>
+        <transition name="showMask">
+            <div class="mask" v-show="showMask">
+                <div class="mask-wrap">
+                    <div class="mask-main">
+                        <h3>粥品天下(大水店)</h3>
+                        <div class="star"></div>
+                        <ele-line>
+                            <span>优惠信息</span>
+                        </ele-line>
+                        <ele-list></ele-list>
+                        <ele-line>
+                            <span>商家公告</span>
+                        </ele-line>
+                        <span class="sj-show">
+                            用2B形容你，人家铅笔不乐意。
+                            都说谈恋爱会影响学习，难道学习，就不影响谈恋爱吗？
+                            别人都用名牌包包，而你，只能用用表情包。
+                            夜太美，尽管再危险，总有人黑着眼眶修着仙。用2B形容你，人家铅笔不乐意。
+                        </span>
+                    </div>
+                </div>
+                <div class="mask_footer" @click="showMask=false">
+                    <i class="icon-close close"></i>
                 </div>
             </div>
-            <div class="mask_footer">
-                <i class="icon-close close"></i>
-            </div>
-        </div>
+        </transition>
     </div>
 
 </template>
@@ -67,6 +68,11 @@
     import eleList from '../ele-list/ele-list.vue'
     export default {
         name: "ele-header",
+        data(){
+            return{
+                showMask:false
+            }
+        },
         components:{
             "ele-icon":eleIcon,
             "ele-line":eleLine,
@@ -196,8 +202,6 @@
             bottom  0
             background-color rgba(7,17,27,0.8)
             padding 64px 36px 32px 36px
-            .mask-wrap
-                min-height 100%
             .mask-main
                 padding-bottom 96p
                 h3 
@@ -217,7 +221,6 @@
                     color #ffffff
                 }
             .mask_footer
-                margin-top -96px
                 padding 32px 0
                 text-align center
                 .close
