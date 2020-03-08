@@ -1,5 +1,5 @@
 <template>
-        <i class="icon" :class="[`icon-${size}`,`${typesArr[type-1]}`]"></i>
+        <i class="icon" :class="[`icon-${size}`,`${typesArr[type]}`]"></i>
 </template>
 
 <script>

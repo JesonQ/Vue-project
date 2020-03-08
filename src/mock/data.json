@@ -3,7 +3,7 @@
     "name": "嘉禾一品（温都水城）",
     "description": "硅谷专送",
     "deliveryTime": 28,
-    "score|1-5.1-3": 4.2,
+    "score|1-5.1": 4,
     "serviceScore": 4.1,
     "foodScore": 4.3,
     "rankRate": 69.2,
@@ -13,7 +13,7 @@
     "sellCount": 90,
     "distance": "1000m",
     "bulletin": "是以粥为特色的中式营养快餐，自2004年10月18日创立“嘉和一品”品牌至今，不断优化管理，积极创新，立足于“贴近百姓生活，服务千家万户”",
-    "supports": [
+    "supports":[
       {
         "type": 0,
         "name": "首单",
@@ -73,6 +73,7 @@
     {
       "name": "优惠",
       "icon": "https://fuss10.elemecdn.com/b/91/8cf4f67e0e8223931cd595dc932fepng.png",
+      "type":1,
       "foods": [
         {
           "name": "南瓜粥",
@@ -327,6 +328,7 @@
     {
       "name": "折扣",
       "icon": "https://fuss10.elemecdn.com/0/6a/05b267f338acfeb8bd682d16e836dpng.png",
+      "type":2,
       "foods": [
         {
           "name": "娃娃菜炖豆腐",

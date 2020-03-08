@@ -17,11 +17,11 @@ export default {
 <style scoped>
     .line-wrap{
         display: flex;
-        justify-content: space-around;
         align-items: center; 
+        margin: 0 auto;
     }
     .line{
-       width: 112px;
+       width: 35%;
        height: 1px; 
        margin: 28px 0 24px 0;
        line-height: 12px;
