@@ -8,6 +8,7 @@ import "@/common/stylus/transition.styl"
 
 Vue.prototype.axios = axios;
 Vue.config.productionTip = false;
+Vue.prototype.bus = new Vue()
 
 new Vue({
   router,

@@ -1,3 +1,4 @@
+// 遮罩层
 .showMask-enter
   opacity 0
 .showMask-enter-active
@@ -10,3 +11,20 @@
   transition opacity 0.3s linear
 .showMask-leave-to
   opacity 0
+
+// 增加减少商品按钮
+.removeAdd-enter
+  opacity 0
+  transform translateX(30px)
+.removeAdd-enter-active
+  transition  all 0.5s linear
+.removeAdd-enter-to
+  opacity 1
+.removeAdd-leave
+  opacity 1
+.removeAdd-leave-active
+  transition all 0.2s linear
+.removeAdd-leave-to
+  opacity 0 
+  transform translateX(30px)
+

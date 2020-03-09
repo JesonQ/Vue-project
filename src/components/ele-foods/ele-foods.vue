@@ -15,14 +15,19 @@
             <span class="oldPrice" v-if="food.oldPrice">¥{{food.oldPrice}}</span>
         </span>
     </div>
+    <ele-control class="control" :food="food"></ele-control>
   </div>
 </template>
 
 <script>
+import eleControl from "components/ele-control/ele-control.vue"
 export default {
   name:'ele-foods',
   props:{
     food:Object
+  },
+  components:{
+    "ele-control":eleControl
   }
 }
 </script>
@@ -33,6 +38,7 @@ export default {
   padding 18px
   display flex
   justify-content center
+  position relative
   .left
     flex 0 0 59px
     img
@@ -72,6 +78,8 @@ export default {
         font-weight 800
         line-height 24px
         text-decoration line-through
+    .control
+      flex 0 0 0
 
 
 </style>
