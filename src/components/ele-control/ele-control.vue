@@ -1,9 +1,9 @@
 <template>
   <div class="control">
     <transition name="removeAdd">
-      <i class="icon-remove_circle_outline" @click="removeCount" v-show="food.count"></i>
+      <i class="icon-remove_circle_outline" @click="removeCount" v-show="food.count>0"></i>
     </transition>
-    <span v-show="food.count">{{food.count}}</span>
+    <span v-show="food.count>0">{{food.count}}</span>
     <transition name="removeAdd">
       <i class="icon-add_circle" @click="addCount"></i>
     </transition>
@@ -14,14 +14,20 @@
 export default {
   name:'eleControl',
   props:{
-    food:Object
+    food:Object,
+    fold:Boolean
   },
   methods:{
     removeCount(){
       this.bus.$emit("removeCount",this.food)
+      if(!this.food.count){
+        this.flod = false
+      }
     },
-    addCount(){
+    addCount(ev){
+      // console.log(this.food)
       this.bus.$emit("addCount",this.food)
+      this.bus.$emit("addCarts",ev.target)
     },
   }
 }
